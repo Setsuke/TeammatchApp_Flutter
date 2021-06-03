@@ -44,7 +44,7 @@ Widget _cardTournament() {
               color: Colors.blue,
               size: 35 ,
             ),
-            title: Text('Tournament 1'),
+            title: Text('Twitch Rivals'),
             subtitle: Text('Compite con tus amigos y obten el gran premio'),
           ),
           Row(
