@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter_application_teammatch/screen/account.dart';
+import 'package:flutter_application_teammatch/screen/profile.dart';
 import 'package:flutter_application_teammatch/screen/tourment.dart';
 import 'package:flutter_application_teammatch/screen/home.dart';
 import 'package:flutter_application_teammatch/screen/team.dart';
@@ -16,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     TourmentScreen(),
     TeamScreen(),
-    AccountScreen()
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
