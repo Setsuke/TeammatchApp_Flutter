@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_teammatch/main_screen.dart';
+import 'package:flutter_application_teammatch/profile/user_preferences.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await UserPreferences.init();
   runApp(MyApp());
 }
 

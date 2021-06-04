@@ -14,7 +14,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    final user = UserPreferences.myUser;
+    final user = UserPreferences.getUser();
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -33,10 +33,13 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(height: 30),
               ProfileWidget(
                 imagePath: user.imagePath,
-                onClicked: () {
-                  Navigator.of(context).push(
+                onClicked: () async{
+                  await Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => EditProfilePage()),
                   );
+                  setState(() {
+                    
+                  });
                 },
               ),
               const SizedBox(height: 25),

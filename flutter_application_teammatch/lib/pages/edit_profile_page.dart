@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_teammatch/profile/button_widget.dart';
 import 'package:flutter_application_teammatch/profile/profile_widget.dart';
 import 'package:flutter_application_teammatch/profile/textfield_widget.dart';
 import 'package:flutter_application_teammatch/profile/user.dart';
@@ -37,20 +38,28 @@ class _EditProfilePageState extends State<EditProfilePage> {
             TextFieldWidget(
               label: 'Full Name',
               text: user.name,
-              onChanged: (name) {},
+              onChanged: (name) =>user = user.copy(name:name),
             ),
             const SizedBox(height: 25),
             TextFieldWidget(
               label: 'Email',
               text: user.email,
-              onChanged: (email) {},
+              onChanged: (email) =>user = user.copy(email:email),
             ),
             const SizedBox(height: 25),
             TextFieldWidget(
               label: 'About',
               text: user.about,
               maxLines: 5,
-              onChanged: (about) {},
+              onChanged: (about) =>user = user.copy(about:about),
+            ),
+            const SizedBox(height:25),
+            ButtonWidget(
+              text:'Save Changes',
+              onClicked: () {
+                UserPreferences.setUser(user);
+                Navigator.of(context).pop();
+              },
             ),
           ],
         ),
