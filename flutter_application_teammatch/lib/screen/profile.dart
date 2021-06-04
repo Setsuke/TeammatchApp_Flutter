@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_teammatch/pages/edit_profile_page.dart';
 import 'package:flutter_application_teammatch/profile/appbar_widget.dart';
 import 'package:flutter_application_teammatch/profile/datas_widget.dart';
 import 'package:flutter_application_teammatch/profile/button_widget.dart';
@@ -26,7 +27,11 @@ class _ProfilePageState extends State<ProfilePage> {
           SizedBox(height:30),
           ProfileWidget(
             imagePath: user.imagePath,
-            onClicked: () async {},
+            onClicked: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context)=> EditProfilePage()),
+              );
+            },
           ),
           const SizedBox(height:25),
           buildName(user),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_application_teammatch/pages/edit_profile_page.dart';
 import 'package:flutter_application_teammatch/screen/profile.dart';
 import 'package:flutter_application_teammatch/screen/tourment.dart';
 import 'package:flutter_application_teammatch/screen/home.dart';
