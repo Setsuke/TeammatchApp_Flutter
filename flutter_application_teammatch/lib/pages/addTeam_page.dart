@@ -24,12 +24,6 @@ class _AddTeamPageState extends State<AddTeamPage> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.group_add),
-        onPressed: () {
-          setState(() {});
-        },
-      ),
     );
   }
 
