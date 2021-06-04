@@ -9,25 +9,24 @@ class _TeamScreenState extends State<TeamScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Teams'),
-      ),
-      body: ListView(
-        children: <Widget>[
-          _cardTeam(),
-          SizedBox(
-            height: 30.0,
-          ),
-          SizedBox(
-            height: 30.0,
-          ),
-        ],
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/header_home.jpg'),
+                fit: BoxFit.cover)),
+        child: ListView(
+          children: <Widget>[
+            _cardTeam(),
+            SizedBox(
+              height: 30.0,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
+        onPressed: () {},
         child: Icon(Icons.group_add),
-        onPressed: () {
-          setState(() {});
-        },
+        backgroundColor: Colors.grey,
       ),
     );
   }

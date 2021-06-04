@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_application_teammatch/screen/profile.dart';
 import 'package:flutter_application_teammatch/screen/tourment.dart';
 import 'package:flutter_application_teammatch/screen/home.dart';
@@ -11,7 +10,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int selectIndex = 0;
+  int _selectIndex = 0;
+
   final screen = [
     HomeScreen(),
     TourmentScreen(),
@@ -21,31 +21,39 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        items: [
-          Icon(
-            Icons.home,
-            size: 30,
-          ),
-          Icon(
-            Icons.gamepad_rounded,
-            size: 30,
-          ),
-          Icon(Icons.group, size: 30),
-          Icon(
-            Icons.person,
-            size: 30,
-          )
-        ],
-        onTap: (index) {
-          setState(() {
-            selectIndex = index;
-          });
-        },
-        animationCurve: Curves.easeInBack,
-        animationDuration: const Duration(milliseconds: 300),
-      ),
-      body: screen[selectIndex],
+      body: screen[_selectIndex],
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedFontSize: 20,
+          iconSize: 20,
+          currentIndex: _selectIndex,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                  size: 30,
+                ),
+                label: 'Home',
+                backgroundColor: Colors.grey),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.gamepad, size: 30),
+                label: 'Tournament',
+                backgroundColor: Colors.grey),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.group, size: 30),
+                label: 'Team',
+                backgroundColor: Colors.grey),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person, size: 30),
+                label: 'Profile',
+                backgroundColor: Colors.grey)
+          ],
+          selectedItemColor: Colors.black,
+          onTap: (index) {
+            setState(() {
+              _selectIndex = index;
+            });
+          }),
     );
   }
 }

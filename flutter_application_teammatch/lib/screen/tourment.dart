@@ -8,11 +8,12 @@ class TourmentScreen extends StatefulWidget {
 class _TourmentScreenState extends State<TourmentScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Tournaments'),
-      ),
-      body: ListView(
+    return MaterialApp(
+        home: Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/header_home.jpg'), fit: BoxFit.cover)),
+      child: ListView(
         children: <Widget>[
           _cardTournament(),
           SizedBox(
@@ -23,16 +24,10 @@ class _TourmentScreenState extends State<TourmentScreen> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          setState(() {});
-        },
-      ),
-    );
+    ));
   }
 
-Widget _cardTournament() {
+  Widget _cardTournament() {
     return Card(
       elevation: 10.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -42,7 +37,7 @@ Widget _cardTournament() {
             leading: Icon(
               Icons.anchor_sharp,
               color: Colors.blue,
-              size: 35 ,
+              size: 35,
             ),
             title: Text('Twitch Rivals'),
             subtitle: Text('Compite con tus amigos y obten el gran premio'),
@@ -52,7 +47,7 @@ Widget _cardTournament() {
             children: [
               // ignore: deprecated_member_use
               FlatButton(onPressed: () {}, child: Text('Detalles')),
-                            // ignore: deprecated_member_use
+              // ignore: deprecated_member_use
               FlatButton(onPressed: () {}, child: Text('Unirse'))
             ],
           )
