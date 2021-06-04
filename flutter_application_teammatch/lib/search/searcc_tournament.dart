@@ -17,6 +17,11 @@ class SearchTournament extends StatelessWidget {
               icon: Icon(Icons.search))
         ],
       ),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/luna.jpg'), fit: BoxFit.cover)),
+      ),
     );
   }
 }

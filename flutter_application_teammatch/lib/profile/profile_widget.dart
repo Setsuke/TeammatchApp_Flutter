@@ -7,7 +7,7 @@ class ProfileWidget extends StatelessWidget {
   const ProfileWidget({
     Key key,
     this.imagePath,
-    this.onClicked, 
+    this.onClicked,
     this.isEdit = false,
   }) : super(key: key);
 
@@ -52,7 +52,7 @@ class ProfileWidget extends StatelessWidget {
         color: Colors.red,
         all: 8,
         child: Icon(
-          isEdit ? Icons.add_a_photo_rounded:Icons.edit,
+          isEdit ? Icons.add_a_photo_rounded : Icons.edit,
           color: Colors.white,
           size: 15,
         ),

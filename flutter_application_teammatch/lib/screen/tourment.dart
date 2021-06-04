@@ -9,22 +9,30 @@ class _TourmentScreenState extends State<TourmentScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/header_home.jpg'), fit: BoxFit.cover)),
-      child: ListView(
-        children: <Widget>[
-          _cardTournament(),
-          SizedBox(
-            height: 30.0,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/header_home.jpg'),
+                  fit: BoxFit.cover)),
+          child: Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+                title: Text('My Tournaments'),
+                backgroundColor: Colors.transparent),
+            body: ListView(
+              children: <Widget>[
+                _cardTournament(),
+                SizedBox(
+                  height: 30.0,
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+              ],
+            ),
           ),
-          SizedBox(
-            height: 30.0,
-          ),
-        ],
-      ),
-    ));
+        ));
   }
 
   Widget _cardTournament() {
@@ -48,7 +56,7 @@ class _TourmentScreenState extends State<TourmentScreen> {
               // ignore: deprecated_member_use
               FlatButton(onPressed: () {}, child: Text('Detalles')),
               // ignore: deprecated_member_use
-              FlatButton(onPressed: () {}, child: Text('Unirse'))
+              FlatButton(onPressed: () {}, child: Text('Abandonar'))
             ],
           )
         ],

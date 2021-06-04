@@ -13,7 +13,7 @@ class DatasWidget extends StatelessWidget {
         ),
       );
 
-  Widget buildDivider() => VerticalDivider(color: Colors.black);
+  Widget buildDivider() => VerticalDivider(color: Colors.white);
 
   Widget buildButton(BuildContext context, String value, String text) =>
       MaterialButton(
@@ -25,12 +25,16 @@ class DatasWidget extends StatelessWidget {
             children: [
               Text(
                 value,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Colors.white),
               ),
               SizedBox(height: 2),
               Text(
                 text,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ],
           ));

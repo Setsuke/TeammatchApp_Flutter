@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_teammatch/pages/edit_profile_page.dart';
 import 'package:flutter_application_teammatch/screen/profile.dart';
 import 'package:flutter_application_teammatch/screen/tourment.dart';
 import 'package:flutter_application_teammatch/screen/home.dart';
@@ -25,8 +24,8 @@ class _MainScreenState extends State<MainScreen> {
       body: screen[_selectIndex],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          selectedFontSize: 20,
-          iconSize: 20,
+          selectedFontSize: 10,
+          iconSize: 10,
           currentIndex: _selectIndex,
           items: [
             BottomNavigationBarItem(
