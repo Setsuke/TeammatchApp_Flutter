@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_teammatch/pages/add_Tournament.dart';
 
 class TourmentScreen extends StatefulWidget {
   @override
@@ -30,6 +31,14 @@ class _TourmentScreenState extends State<TourmentScreen> {
                   height: 30.0,
                 ),
               ],
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AddTournament()));
+              },
+              child: Icon(Icons.group_add),
+              backgroundColor: Colors.grey,
             ),
           ),
         ));
