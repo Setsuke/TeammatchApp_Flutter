@@ -1,6 +1,6 @@
-import 'package:flutter_application_teammatch/profile/user_preferences.dart';
+//import 'package:flutter_application_teammatch/profile/user_preferences.dart';
 
-class User{
+class User {
   final String imagePath;
   final String name;
   final String email;
@@ -12,31 +12,31 @@ class User{
     this.email,
     this.about,
   });
-  
+
   User copy({
-  String imagePath,
-  String name,
-  String email,
-  String about,
-  })=>
-    User(
-      imagePath: imagePath?? this.imagePath,
-      name: name?? this.name,
-      email: email?? this.email,
-      about: about?? this.about,
+    String imagePath,
+    String name,
+    String email,
+    String about,
+  }) =>
+      User(
+        imagePath: imagePath ?? this.imagePath,
+        name: name ?? this.name,
+        email: email ?? this.email,
+        about: about ?? this.about,
       );
 
-  static User fromJson(Map<String,dynamic> json) => User(
-    imagePath: json['imagePath'],
-    name:json['name'],
-    email:json['email'],
-    about:json['about'],
-  );
+  static User fromJson(Map<String, dynamic> json) => User(
+        imagePath: json['imagePath'],
+        name: json['name'],
+        email: json['email'],
+        about: json['about'],
+      );
 
-  Map<String,dynamic> toJson()=>{
-    'imagePath': imagePath,
-    'name':name,
-    'email':email,
-    'about':about,
-  };
+  Map<String, dynamic> toJson() => {
+        'imagePath': imagePath,
+        'name': name,
+        'email': email,
+        'about': about,
+      };
 }

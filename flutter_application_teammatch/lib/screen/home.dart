@@ -49,6 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Ink.image(
               image: AssetImage('assets/torneo.jpg'),
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.4), BlendMode.darken),
               child: InkWell(onTap: () {
                 Navigator.push(
                     context,
@@ -77,6 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Ink.image(
               image: AssetImage('assets/teams.jpg'),
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.4), BlendMode.darken),
               child: InkWell(onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SearchTeams()));
