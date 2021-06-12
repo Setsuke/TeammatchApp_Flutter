@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_teammatch/search/searcc_tournament.dart';
+import 'package:flutter_application_teammatch/search/search_tournament.dart';
 import 'package:flutter_application_teammatch/search/search_teams.dart';
 
 class HomeScreen extends StatefulWidget {

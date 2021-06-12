@@ -7,7 +7,9 @@ class SearchTournament extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text('Search Tournament'),
         actions: <Widget>[
           IconButton(
