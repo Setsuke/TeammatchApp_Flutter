@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_teammatch/pages/addTournament_page.dart';
 import 'package:flutter_application_teammatch/pages/tournament_create.dart';
 import 'package:flutter_application_teammatch/pages/tournament_joined.dart';
 
