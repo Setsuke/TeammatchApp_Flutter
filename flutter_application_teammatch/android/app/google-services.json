@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "500452087978",
+    "project_id": "teammatch-dce5f",
+    "storage_bucket": "teammatch-dce5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500452087978:android:384465c041e135015518d3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_teammatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500452087978-kokuiirsmj1r70br6nu0d62nsu6e6bit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDATRoAN-BybJN4Y2ZG7HItpO_fljeS43c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500452087978-kokuiirsmj1r70br6nu0d62nsu6e6bit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
