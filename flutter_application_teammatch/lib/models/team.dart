@@ -8,21 +8,12 @@ class Team {
   int levelAverage;
 
   Team({
-    this.id,
-    this.name,
-    this.teamSize,
-    this.hoursPlayed,
-    this.levelAverage,
+    required this.id,
+    required this.name,
+    required this.teamSize,
+    required this.hoursPlayed,
+    required this.levelAverage,
   });
-
-  Team.fromJsonMap(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    teamSize = json['teamSize'];
-    hoursPlayed = json['hoursPlayed'];
-    levelAverage = json['levelAverage'];
-  }
-
   // Parsing data from json for networking
   factory Team.fromJson(Map<String, dynamic> map) {
     return Team(

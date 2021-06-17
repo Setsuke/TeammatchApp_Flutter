@@ -4,7 +4,7 @@ import 'package:flutter_application_teammatch/profile/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserPreferences {
-  static SharedPreferences _preferences;
+  static late SharedPreferences _preferences;
   static const _keyUser = "user";
 
   static const myUser = User(
