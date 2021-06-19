@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_teammatch/pages/team_network_page.dart';
+import 'package:flutter_application_teammatch/pages/tournament_network_page.dart';
+import 'package:flutter_application_teammatch/pages/tournament_page.dart';
 import 'package:flutter_application_teammatch/search/search_tournament.dart';
 import 'package:flutter_application_teammatch/search/search_teams.dart';
 
@@ -56,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => SearchTournament()));
+                        builder: (context) => TournamentNetworkPage()));
               }),
               height: 240,
               fit: BoxFit.cover,
