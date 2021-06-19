@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_teammatch/pages/team_network_page.dart';
 import 'package:flutter_application_teammatch/search/search_tournament.dart';
 import 'package:flutter_application_teammatch/search/search_teams.dart';
 
@@ -83,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Colors.black.withOpacity(0.4), BlendMode.darken),
               child: InkWell(onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SearchTeams()));
+                    MaterialPageRoute(builder: (context) => TeamNetworkPage()));
               }),
               height: 240,
               fit: BoxFit.cover,

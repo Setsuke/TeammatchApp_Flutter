@@ -7,10 +7,10 @@ class TextFieldWidget extends StatefulWidget {
   final int maxLines;
 
   const TextFieldWidget({
-    Key? key,
-    required this.label,
-    required this.text,
-    required this.onChanged,
+    Key key,
+    @required this.label,
+    @required this.text,
+    @required this.onChanged,
     this.maxLines = 1,
   }) : super(key: key);
 
@@ -19,7 +19,7 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
-  late TextEditingController controller;
+  TextEditingController controller;
 
   @override
   void initState() {

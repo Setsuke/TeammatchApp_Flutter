@@ -7,17 +7,17 @@ class User {
   final String about;
 
   const User({
-    required this.imagePath,
-    required this.name,
-    required this.email,
-    required this.about,
+    this.imagePath,
+    this.name,
+    this.email,
+    this.about,
   });
 
   User copy({
-    String? imagePath,
-    String? name,
-    String? email,
-    String? about,
+    String imagePath,
+    String name,
+    String email,
+    String about,
   }) =>
       User(
         imagePath: imagePath ?? this.imagePath,

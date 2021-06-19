@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_teammatch/search/search_delegate.dart';
 
 class SearchTournament extends StatelessWidget {
-  const SearchTournament({Key? key}) : super(key: key);
+  const SearchTournament({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
