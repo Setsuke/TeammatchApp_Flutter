@@ -12,7 +12,7 @@ class GradientBack extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bike.jpeg'), fit: BoxFit.cover)),
+              image: AssetImage('assets/login.jpg'), fit: BoxFit.cover)),
       child: Text(
         title,
         style: TextStyle(

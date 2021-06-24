@@ -25,7 +25,7 @@ class _ResgiterPageState extends State<ResgiterPage> {
             height: responsive.height,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/bike.jpeg'),
+                    image: AssetImage('assets/login.jpg'),
                     fit: BoxFit.cover,
                     colorFilter: ColorFilter.mode(
                         Colors.black.withOpacity(0.5), BlendMode.darken))),
