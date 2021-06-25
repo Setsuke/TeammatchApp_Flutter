@@ -21,7 +21,7 @@ class LogoContainer extends StatelessWidget {
         padding: EdgeInsets.all(this.size * 0.15),
         child: Center(
             child: Image.asset(
-          'assets/logo.png',
+          'assets/teammatch.png',
           width: this.size * 0.6,
           height: this.size * 0.6,
         )));
