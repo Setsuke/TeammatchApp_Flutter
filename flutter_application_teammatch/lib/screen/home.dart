@@ -1,9 +1,8 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_teammatch/pages/team_network_page.dart';
 import 'package:flutter_application_teammatch/pages/tournament_network_page.dart';
-import 'package:flutter_application_teammatch/pages/tournament_page.dart';
-import 'package:flutter_application_teammatch/search/search_tournament.dart';
-import 'package:flutter_application_teammatch/search/search_teams.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -59,6 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => TournamentNetworkPage()));
+                FirebaseAnalytics analytics = FirebaseAnalytics();
+                print('HomeTournament');
+                analytics.logEvent(
+                    name: "SearchTournament",
+                    parameters: <String, dynamic>{
+                      'plant_name': 'String',
+                    });
               }),
               height: 240,
               fit: BoxFit.cover,
@@ -87,6 +93,12 @@ class _HomeScreenState extends State<HomeScreen> {
               child: InkWell(onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => TeamNetworkPage()));
+                FirebaseAnalytics analytics = FirebaseAnalytics();
+                print('HomeTeam');
+                analytics
+                    .logEvent(name: "SearcTeam", parameters: <String, dynamic>{
+                  'plant_name': 'String',
+                });
               }),
               height: 240,
               fit: BoxFit.cover,
