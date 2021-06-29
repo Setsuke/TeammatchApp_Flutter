@@ -60,10 +60,7 @@ class _TourmentScreenState extends State<TourmentScreen> {
                 FirebaseAnalytics analytics = FirebaseAnalytics();
                 print('TournametCreate');
                 analytics.logEvent(
-                    name: "CreateTournament",
-                    parameters: <String, dynamic>{
-                      'plant_name': 'String',
-                    });
+                    name: "CreateTournament", parameters: <String, dynamic>{});
               }),
               height: 240,
               fit: BoxFit.cover,
@@ -97,10 +94,7 @@ class _TourmentScreenState extends State<TourmentScreen> {
                 FirebaseAnalytics analytics = FirebaseAnalytics();
                 print('TournametJoin');
                 analytics.logEvent(
-                    name: "JoinTournament",
-                    parameters: <String, dynamic>{
-                      'plant_name': 'String',
-                    });
+                    name: "JoinTournament", parameters: <String, dynamic>{});
               }),
               height: 240,
               fit: BoxFit.cover,

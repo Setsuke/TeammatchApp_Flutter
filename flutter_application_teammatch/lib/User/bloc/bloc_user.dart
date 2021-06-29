@@ -13,7 +13,7 @@ class UserBloc implements Bloc {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     print('login');
     analytics.logEvent(name: "Login_Google", parameters: <String, dynamic>{
-      'plant_name': 'String',
+      'user_name': 'String',
     });
     return _auth_repository.signInFirebase();
   }

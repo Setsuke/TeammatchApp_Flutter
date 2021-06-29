@@ -61,10 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 FirebaseAnalytics analytics = FirebaseAnalytics();
                 print('HomeTournament');
                 analytics.logEvent(
-                    name: "SearchTournament",
-                    parameters: <String, dynamic>{
-                      'plant_name': 'String',
-                    });
+                    name: "SearchTournament", parameters: <String, dynamic>{});
               }),
               height: 240,
               fit: BoxFit.cover,
@@ -95,10 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => TeamNetworkPage()));
                 FirebaseAnalytics analytics = FirebaseAnalytics();
                 print('HomeTeam');
-                analytics
-                    .logEvent(name: "SearcTeam", parameters: <String, dynamic>{
-                  'plant_name': 'String',
-                });
+                analytics.logEvent(
+                    name: "SearchTeam", parameters: <String, dynamic>{});
               }),
               height: 240,
               fit: BoxFit.cover,
