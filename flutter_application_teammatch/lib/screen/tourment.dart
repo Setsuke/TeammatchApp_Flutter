@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_teammatch/pages/tournament_create.dart';
 import 'package:flutter_application_teammatch/pages/tournament_joined.dart';
@@ -56,6 +57,13 @@ class _TourmentScreenState extends State<TourmentScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => TournamentCreate()));
+                FirebaseAnalytics analytics = FirebaseAnalytics();
+                print('TournametCreate');
+                analytics.logEvent(
+                    name: "CreateTournament",
+                    parameters: <String, dynamic>{
+                      'plant_name': 'String',
+                    });
               }),
               height: 240,
               fit: BoxFit.cover,
@@ -86,6 +94,13 @@ class _TourmentScreenState extends State<TourmentScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => TournamentSubscribe()));
+                FirebaseAnalytics analytics = FirebaseAnalytics();
+                print('TournametJoin');
+                analytics.logEvent(
+                    name: "JoinTournament",
+                    parameters: <String, dynamic>{
+                      'plant_name': 'String',
+                    });
               }),
               height: 240,
               fit: BoxFit.cover,
